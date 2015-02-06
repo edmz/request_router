@@ -15,7 +15,7 @@ defmodule Accounter.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Accounter, []},
-     applications: [:phoenix, :cowboy, :logger, :httpoison]]
+     applications: [:phoenix, :cowboy, :logger, :httpoison, :poolboy]]
   end
 
   # Specifies your project dependencies
@@ -24,6 +24,7 @@ defmodule Accounter.Mixfile do
   defp deps do
     [{:phoenix, github: "phoenixframework/phoenix"},
      {:cowboy, "~> 1.0"},
+     {:poolboy, "~> 1.4.2"},
      {:httpoison, "~> 0.6"}
     ]
   end
